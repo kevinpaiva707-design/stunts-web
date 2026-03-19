@@ -2,10 +2,9 @@
 Dos(document.getElementById("game"), {
   url: "stunts.zip",
   autoStart: true,
-  kiosk: true
-}).ready((fs, main) => {
-  fs.extract("stunts.zip").then(() => {
-    main(["-c", "STUNTS.COM"]);
-  });
+  kiosk: true,
+  onEvent: (event) => {
+    console.log(event);
+  }
 });
 </script>
