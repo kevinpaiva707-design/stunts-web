@@ -11,7 +11,11 @@
 <div id="game" style="width:960px;height:600px;"></div>
 
 <script>
-Dos(document.getElementById("game")).run("stunts.zip", "./STUNTS.COM");
+const dos = new Dos(document.getElementById("game"));
+
+dos.run("stunts.zip").then(ci => {
+    ci.shell("STUNTS.COM");
+});
 </script>
 
 </body>
