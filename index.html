@@ -2,37 +2,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Stunts Web</title>
-
+<title>Stunts</title>
 <script src="https://js-dos.com/6.22/current/js-dos.js"></script>
-
-<style>
-body{
-background:#000;
-color:white;
-text-align:center;
-font-family:Arial;
-}
-
-#game{
-width:960px;
-height:600px;
-margin:auto;
-}
-</style>
 </head>
 
-<body>
+<body style="background:black;display:flex;justify-content:center;align-items:center;height:100vh;margin:0;">
 
-<h2>Stunts rodando no navegador</h2>
-
-<div id="game"></div>
+<div id="game" style="width:960px;height:600px;"></div>
 
 <script>
 Dos(document.getElementById("game"), {
 url: "stunts.zip",
-autoStart: true,
-kiosk: true
+autoStart: true
 });
 </script>
 
