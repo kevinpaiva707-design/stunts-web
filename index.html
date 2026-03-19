@@ -30,7 +30,9 @@ height:600px;
 <script>
 const dos = new Dos(document.getElementById("game"));
 
-dos.run("stunts.zip", "./ST.COM");
+dos.run("stunts.zip").then((ci) => {
+    ci.shell("STUNTS.COM");
+});
 </script>
 
 </body>
