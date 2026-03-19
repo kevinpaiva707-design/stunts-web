@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Stunts Web</title>
+<title>Stunts</title>
 
-<script src="https://js-dos.com/6.22/current/js-dos.js"></script>
+<script src="https://v8.js-dos.com/latest/js-dos.js"></script>
 
 <style>
 body{
-background:black;
+background:#000;
 margin:0;
 display:flex;
 justify-content:center;
@@ -28,14 +28,7 @@ height:600px;
 <div id="game"></div>
 
 <script>
-const ci = Dos(document.getElementById("game"), {
-    url: "stunts.zip",
-    autoStart: false
-});
-
-ci.ready((fs, main) => {
-    main(["-c", "STUNTS.COM"]);
-});
+Dos(document.getElementById("game")).run("stunts.zip", "./STUNTS.COM");
 </script>
 
 </body>
