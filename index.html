@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Stunts</title>
+<title>Stunts Web</title>
 
 <script src="https://js-dos.com/6.22/current/js-dos.js"></script>
 
@@ -28,9 +28,13 @@ height:600px;
 <div id="game"></div>
 
 <script>
-Dos(document.getElementById("game"), {
-url: "stunts.zip",
-autoStart: true
+const ci = Dos(document.getElementById("game"), {
+    url: "stunts.zip",
+    autoStart: false
+});
+
+ci.ready((fs, main) => {
+    main(["-c", "STUNTS.COM"]);
 });
 </script>
 
