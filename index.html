@@ -8,7 +8,7 @@
 
 <style>
 body{
-background:black;
+background:#000;
 margin:0;
 display:flex;
 justify-content:center;
@@ -28,7 +28,8 @@ height:600px;
 <div id="game"></div>
 
 <script>
-Dos(document.getElementById("game")).run("stunts.zip", "./ST.COM");
+const dos = new Dos(document.getElementById("game"));
+dos.run("stunts.zip");
 </script>
 
 </body>
